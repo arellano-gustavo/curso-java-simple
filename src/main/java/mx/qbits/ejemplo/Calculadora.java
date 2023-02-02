@@ -6,6 +6,6 @@ public class Calculadora {
   }
   public static void main(String...argv) {
     Calculadora c = new Calculadora();
-    Systerm.out.println("Resultado: "+ c.suma(2,7));
+    System.out.println("Resultado: "+ c.suma(2,7));
   }
 }
