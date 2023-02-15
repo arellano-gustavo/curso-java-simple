@@ -2,9 +2,14 @@ package mx.qbits.ejemplo;
 
 public class Principal {
     public void corre() {
-        Papa p = new Papa();
-        p.hola();
-        invoca(p);
+        Rana serRana = new Rana(666, "tocayoRanota", 6.7f);
+        //serRana.setNombre("TocayoRana");
+        
+        prueba(serRana);
+    }
+    public void prueba(Mascota s) {
+        System.out.println(s.getNombre());
+        System.out.println(s.getEdad());
     }
     public void invoca(Abuelo p) {
         prn(p.hi());
