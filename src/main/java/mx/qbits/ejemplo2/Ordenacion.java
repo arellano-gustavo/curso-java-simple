@@ -5,8 +5,17 @@ import java.util.TreeSet;
 
 public class Ordenacion {
     public static void main(String[] gustavo) {
-        Ordenacion ord = new Ordenacion();
-        ord.corre();
+        Pba p = new Pba();
+//        int r = p.suma(123, 3);
+//        if(r==126) 
+//            System.out.println("si jaló este caso");
+//        else
+//            System.out.println("no salió el valor esperado. lo que salió fue:" + r);
+        int r = p.divide(0, 36768);
+        if(r==0)
+            System.out.println("si jaló este caso");
+        else
+            System.out.println("no salió el valor esperado. lo que salió fue:" + r);
     }
     
     public void corre() {
@@ -18,7 +27,7 @@ public class Ordenacion {
         Producto q5 = new Producto(5, "cuchara2", 444.45f, false, 256, "blanco");
         Producto q6 = new Producto(6, "cuchara2", 444.45f, false, 355, "blanco");
         
-        SortedSet<Producto> caja = new TreeSet<Producto>((a,b)-> ordena(a,b));
+        SortedSet<Producto> caja = new TreeSet<Producto>((a,b) -> ordena(a,b));
         
         caja.add(q1);
         caja.add(q2);

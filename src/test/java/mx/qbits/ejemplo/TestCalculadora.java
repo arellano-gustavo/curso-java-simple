@@ -4,10 +4,16 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestCalculadora {
+    private Calc calc = new Calc();
+    
     @Test
     public void testConcatenate() {
-        Calc calc = new Calc();
         int result = calc.suma(3, 5);
-        assertEquals(8, result);
+        assertEquals(11, result);
+    }
+    @Test
+    public void testConcatenate2() {
+        int result = calc.suma(5, 5);
+        assertEquals(10, result);
     }
 }
