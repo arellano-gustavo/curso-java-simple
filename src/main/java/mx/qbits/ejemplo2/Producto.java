@@ -69,14 +69,7 @@ public class Producto  {
 
     @Override
     public String toString() {
-        return nombre;
-//        return "Producto ["+ 
-//                " id=" + id + 
-//                ", nombre=" + nombre + 
-//                ", precio=" + precio + 
-//                ", paraRegalo=" + paraRegalo + 
-//                ", existencia=" + existencia + 
-//                ", color=" + color + "]";
+        return nombre + "(" + id + ")";
     }
 
     @Override
