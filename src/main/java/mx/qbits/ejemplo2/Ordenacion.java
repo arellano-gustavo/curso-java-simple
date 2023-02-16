@@ -1,5 +1,11 @@
 package mx.qbits.ejemplo2;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Stream;
@@ -40,10 +46,29 @@ public class Ordenacion {
         
 //        caja.stream().forEach( x -> prn(x.getNombre())  );
 //        System.out.println();
+//        
 //        caja.stream().forEach( x -> prn(x.getColor()) );
+//        System.out.println();
+        
+        Stream<Producto> res = caja.stream().filter(x -> filtroGus(x));
+        res.forEach(x -> prn(x.getId()+"_"+x.getNombre()));
+        System.out.println();
+        
+        /*
+        Map<String, Producto> mapa = new HashMap<>();
+        
+        Set<Producto> cajita = new HashSet<>();
+        cajita.stream();
+        
+        List<Ordenacion> otra = new ArrayList<>();
+        otra.stream();
         
         Stream<Producto> result = caja.stream().map(x -> modifica(x) );
         result.forEach( x -> prn(x.getId()+ "_" +x.getColor()+"_"+x.getNombre()) );
+        */
+    }
+    private boolean filtroGus(Producto p) {
+        return p.getId()>4;
     }
     
     private Producto modifica(Producto x) {
